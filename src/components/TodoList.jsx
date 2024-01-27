@@ -40,7 +40,7 @@ const TodoList = () => {
                                 {todo.text} 
                             </div>
                             <div>
-                                <i className="fa-solid fa-check pr-4 cursor-pointer text-lg" onClick={() => handleTick(todo.id)}></i>
+                                <i className="fa-solid fa-check pr-4 cursor-pointer text-lg"></i>
                                 <button className="py-1 font-semibold rounded" onClick={() => dispatch(removeTodo(todo.id))}>
                                     <i className="fa-solid fa-xmark text-xl pt-1 "></i>
                                 </button>
