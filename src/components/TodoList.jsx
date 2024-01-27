@@ -3,11 +3,13 @@ import { removeTodo,toggleTodo } from "../utils/todoSlice"
 import { useEffect, useState } from "react"
 
 const TodoList = () => {
-    const [filter,setfilter] = useState([])
+    const storedData = JSON.parse(localStorage.getItem('mytodo'))
+    const [filter,setfilter] = useState(storedData)
     const dispatch = useDispatch()
     const todos = useSelector(state => state.todo.todos)
 
     useEffect(() => {
+        localStorage.setItem('mytodo',JSON.stringify(todos))
         setfilter(todos)
     },[todos])
     
