@@ -26,6 +26,7 @@ const TodoList = () => {
     const handleTick = (id) => {
         dispatch(toggleTodo(id))
     }
+    if(!filter)return
     return (
         <div className="max-w-[900px] mx-auto px-2">
             <div className='flex items-center gap-6'>
